@@ -56,3 +56,21 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  const content = document.getElementById('content');
+
+  languageSwitcher.addEventListener('change', function() {
+    const selectedLanguage = languageSwitcher.value;
+    updateLanguage(content, selectedLanguage);
+  });
+
+  function updateLanguage(container, language) {
+    const elements = container.querySelectorAll('[data-en], [data-es]');
+    elements.forEach(element => {
+      element.textContent = element.getAttribute(`data-${language}`);
+    });
+  }
+});

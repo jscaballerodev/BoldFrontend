@@ -249,6 +249,50 @@ body {
   #HEADER
 \*-----------------------------------*/
 
+#languageSwitcher {
+  top: 10px;
+  right: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align-last: center;
+}
+
+/* Custom arrow to the select element */
+#languageSwitcher::-ms-expand {
+  display: none;
+}
+
+#languageSwitcher::after {
+  content: '▼';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #fff;
+}
+
+/* Change the background color on hover */
+#languageSwitcher:hover {
+  background-color: #0069d9;
+}
+
+/* Apply styles to option elements */
+#languageSwitcher option {
+  background-color: #fff;
+  color: #333;
+}
+
 .header {
   position: fixed;
   top: 0;
